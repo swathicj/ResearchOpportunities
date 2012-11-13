@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  contact_info: MyString
+  academic_unit: MyString
+  work_period: MyString
+  academic_level: MyString
+  gpa: MyString
+  class_required: MyText
+  requirements: MyText
+  description: MyText
+  application_deadline: 2012-11-08
+  paid: false
+  unmjobs_number: MyString
+  unmjobs_name: MyString
+  student_research_assistant: MyString
+
+two:
+  title: MyString
+  contact_info: MyString
+  academic_unit: MyString
+  work_period: MyString
+  academic_level: MyString
+  gpa: MyString
+  class_required: MyText
+  requirements: MyText
+  description: MyText
+  application_deadline: 2012-11-08
+  paid: false
+  unmjobs_number: MyString
+  unmjobs_name: MyString
+  student_research_assistant: MyString

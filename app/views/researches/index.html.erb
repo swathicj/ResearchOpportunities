@@ -1,0 +1,49 @@
+<h1>Listing researches</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Contact info</th>
+    <th>Academic unit</th>
+    <th>Work period</th>
+    <th>Academic level</th>
+    <th>Gpa</th>
+    <th>Class required</th>
+    <th>Requirements</th>
+    <th>Description</th>
+    <th>Application deadline</th>
+    <th>Paid</th>
+    <th>Unmjobs number</th>
+    <th>Unmjobs name</th>
+    <th>Student research assistant</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @researches.each do |research| %>
+  <tr>
+    <td><%= research.title %></td>
+    <td><%= research.contact_info %></td>
+    <td><%= research.academic_unit %></td>
+    <td><%= research.work_period %></td>
+    <td><%= research.academic_level %></td>
+    <td><%= research.gpa %></td>
+    <td><%= research.class_required %></td>
+    <td><%= research.requirements %></td>
+    <td><%= research.description %></td>
+    <td><%= research.application_deadline %></td>
+    <td><%= research.paid %></td>
+    <td><%= research.unmjobs_number %></td>
+    <td><%= research.unmjobs_name %></td>
+    <td><%= research.student_research_assistant %></td>
+    <td><%= link_to 'Show', research %></td>
+    <td><%= link_to 'Edit', edit_research_path(research) %></td>
+    <td><%= link_to 'Destroy', research, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Research', new_research_path %>

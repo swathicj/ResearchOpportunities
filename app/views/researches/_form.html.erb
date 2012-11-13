@@ -1,0 +1,73 @@
+<%= form_for(@research) do |f| %>
+  <% if @research.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@research.errors.count, "error") %> prohibited this research from being saved:</h2>
+
+      <ul>
+      <% @research.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Research <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_info %>
+    <%= f.text_field :contact_info %>
+  </div>
+  <div class="field">
+    <%= f.label :academic_unit %>
+    <%= f.text_field :academic_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :work_period %><br />
+    <%= f.text_field :work_period %>
+  </div>
+  <div class="field">
+    <%= f.label :academic_level %><br />
+    <%= f.text_field :academic_level %>
+  </div>
+  <div class="field">
+    <%= f.label :gpa %><br />
+    <%= f.text_field :gpa %>
+  </div>
+  <div class="field">
+    <%= f.label :class_required %><br />
+    <%= f.text_area :class_required, rows: 2%>
+  </div>
+  <div class="field">
+    <%= f.label :requirements %><br />
+    <%= f.text_area :requirements %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :application_deadline %><br />
+    <%= f.date_select :application_deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :paid %><br />
+    <%= f.check_box :paid %>
+  </div>
+  <div class="field">
+    <%= f.label :unmjobs_number %><br />
+    <%= f.text_field :unmjobs_number %>
+  </div>
+  <div class="field">
+    <%= f.label :unmjobs_name %><br />
+    <%= f.text_field :unmjobs_name %>
+  </div>
+  <div class="field">
+    <%= f.label :student_research_assistant %><br />
+    <%= f.text_field :student_research_assistant %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

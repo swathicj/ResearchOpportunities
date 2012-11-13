@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @research.title %>
+</p>
+
+<p>
+  <b>Contact info:</b>
+  <%= @research.contact_info %>
+</p>
+
+<p>
+  <b>Academic unit:</b>
+  <%= @research.academic_unit %>
+</p>
+
+<p>
+  <b>Work period:</b>
+  <%= @research.work_period %>
+</p>
+
+<p>
+  <b>Academic level:</b>
+  <%= @research.academic_level %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @research.gpa %>
+</p>
+
+<p>
+  <b>Class required:</b>
+  <%= @research.class_required %>
+</p>
+
+<p>
+  <b>Requirements:</b>
+  <%= @research.requirements %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @research.description %>
+</p>
+
+<p>
+  <b>Application deadline:</b>
+  <%= @research.application_deadline %>
+</p>
+
+<p>
+  <b>Paid:</b>
+  <%= @research.paid %>
+</p>
+
+<p>
+  <b>Unmjobs number:</b>
+  <%= @research.unmjobs_number %>
+</p>
+
+<p>
+  <b>Unmjobs name:</b>
+  <%= @research.unmjobs_name %>
+</p>
+
+<p>
+  <b>Student research assistant:</b>
+  <%= @research.student_research_assistant %>
+</p>
+
+
+<%= link_to 'Edit', edit_research_path(@research) %> |
+<%= link_to 'Back', researches_path %>
