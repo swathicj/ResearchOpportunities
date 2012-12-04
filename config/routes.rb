@@ -1,4 +1,6 @@
 ResearchOpprotunities::Application.routes.draw do
+  resources :advisors
+
   resources :researches
 
   # The priority is based upon order of creation:
