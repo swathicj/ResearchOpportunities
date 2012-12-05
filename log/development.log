@@ -2493,3 +2493,7 @@ Served asset /researches.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:51:03 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-12-03 21:20:59 -0700
+Served asset /rails.png - 304 Not Modified (78ms)

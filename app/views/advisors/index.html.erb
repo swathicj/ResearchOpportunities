@@ -1,28 +1,28 @@
 <h1>Listing advisors</h1>
 
 <table>
-  <tr>
-    <th>Username</th>
-    <th>Password</th>
-    <th>Contact info</th>
-    <th>Interests</th>
-    <th>Degrees</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	<tr>
+		<th>Username</th>
+		<th>Password</th>
+		<th>Contact info</th>
+		<th>Interests</th>
+		<th>Degrees</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
 
 <% @advisors.each do |advisor| %>
-  <tr>
-    <td><%= advisor.username %></td>
-    <td><%= advisor.password %></td>
-    <td><%= advisor.contact_info %></td>
-    <td><%= advisor.interests %></td>
-    <td><%= advisor.degrees %></td>
-    <td><%= link_to 'Show', advisor %></td>
-    <td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
-    <td><%= link_to 'Destroy', advisor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+	<tr>
+		<td><%= advisor.username %></td>
+		<td><%= advisor.password %></td>
+		<td><%= advisor.contact_info %></td>
+		<td><%= advisor.interests %></td>
+		<td><%= advisor.degrees %></td>
+		<td><%= link_to 'Show', advisor %></td>
+		<td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
+		<td><%= link_to 'Destroy', advisor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
 <% end %>
 </table>
 
