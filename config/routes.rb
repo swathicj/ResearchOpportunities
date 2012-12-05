@@ -1,5 +1,11 @@
 ResearchOpprotunities::Application.routes.draw do
+  get "profile/index"
+
+  resources :students
+  
   resources :researches
+
+  root :to => 'profile#index', :as => 'profile'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
