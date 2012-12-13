@@ -2232,3 +2232,9 @@ Served asset /jquery.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-08 14:40:36 -0700
 Served asset /application.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("researches")
