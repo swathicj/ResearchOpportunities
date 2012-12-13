@@ -11468,3 +11468,1016 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
 
   Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
 >>>>>>> d1233e9cc9b4ea2a9fed641f067b842972da94dc
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (150.0ms)[0m  [1mCREATE TABLE "advisors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone_number" varchar(255)) [0m
+  [1m[35m (153.2ms)[0m  CREATE TABLE "researches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "contact_info" varchar(255), "academic_unit" varchar(255), "work_period" varchar(255), "academic_level" varchar(255), "gpa" varchar(255), "class_required" text, "requirements" text, "description" text, "application_deadline" date, "paid" boolean, "unmjobs_number" varchar(255), "unmjobs_name" varchar(255), "student_research_assistant" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "open" boolean, "active" boolean, "closed" boolean) 
+  [1m[36m (152.9ms)[0m  [1mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar(255), "lastName" varchar(255), "email" varchar(255), "minor" varchar(255), "major" varchar(255), "GPA" decimal, "interests" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (155.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (122.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (298.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121205210927')
+  [1m[36m (133.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121130014952')[0m
+  [1m[35m (111.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121108210751')
+  [1m[36m (111.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121130014403')[0m
+  [1m[35m (133.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121205205736')
+  [1m[36m (144.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121205205908')[0m
+  [1m[35m (146.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121203001806')
+  [1m[36m (144.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121205205424')[0m
+  [1m[35m (144.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121203044055')
+  [1m[36m (144.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121130014938')[0m
+  [1m[35m (133.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121205205610')
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+Migrating to AddOpenColumnToResearches (20121130014403)
+Migrating to AddActiveColumnToResearches (20121130014938)
+Migrating to AddClosedColumnToResearches (20121130014952)
+Migrating to CreateStudents (20121203001806)
+Migrating to CreateAdvisors (20121203044055)
+Migrating to AddFirstNameToAdvisors (20121205205424)
+Migrating to AddLastNameToAdvisors (20121205205610)
+Migrating to AddEmailToAdvisors (20121205205736)
+Migrating to AddPhoneNumberToAdvisors (20121205205908)
+Migrating to RemoveUsernameFromAdvisors (20121205210927)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("advisors")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("researches")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("students")
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-13 14:57:31 -0700
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2012-12-13 14:57:36 -0700
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students" ORDER BY lastName[0m
+  Rendered students/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 102ms (Views: 47.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 14:57:36 -0700
+Served asset /scaffold.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/Profile.css?body=1" for 127.0.0.1 at 2012-12-13 14:57:36 -0700
+Served asset /Profile.css - 200 OK (1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 14:57:36 -0700
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/researches" for 127.0.0.1 at 2012-12-13 14:57:44 -0700
+Processing by ResearchesController#index as HTML
+  [1m[35mResearch Load (0.1ms)[0m  SELECT "researches".* FROM "researches" 
+  Rendered researches/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 14:57:44 -0700
+Served asset /scaffold.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 14:57:44 -0700
+Served asset /defaults.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 14:57:50 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.1ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/advisors (3.5ms)
+Completed 200 OK in 29ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 14:57:50 -0700
+Served asset /scaffold.css - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 14:57:50 -0700
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+Migrating to AddOpenColumnToResearches (20121130014403)
+Migrating to AddActiveColumnToResearches (20121130014938)
+Migrating to AddClosedColumnToResearches (20121130014952)
+Migrating to CreateStudents (20121203001806)
+Migrating to CreateAdvisors (20121203044055)
+Migrating to AddFirstNameToAdvisors (20121205205424)
+Migrating to AddLastNameToAdvisors (20121205205610)
+Migrating to AddEmailToAdvisors (20121205205736)
+Migrating to AddPhoneNumberToAdvisors (20121205205908)
+Migrating to RemoveUsernameFromAdvisors (20121205210927)
+Migrating to DeviseCreateUsers (20121213215958)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+Migrating to AddOpenColumnToResearches (20121130014403)
+Migrating to AddActiveColumnToResearches (20121130014938)
+Migrating to AddClosedColumnToResearches (20121130014952)
+Migrating to CreateStudents (20121203001806)
+Migrating to CreateAdvisors (20121203044055)
+Migrating to AddFirstNameToAdvisors (20121205205424)
+Migrating to AddLastNameToAdvisors (20121205205610)
+Migrating to AddEmailToAdvisors (20121205205736)
+Migrating to AddPhoneNumberToAdvisors (20121205205908)
+Migrating to RemoveUsernameFromAdvisors (20121205210927)
+Migrating to DeviseCreateUsers (20121213215958)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+Migrating to AddOpenColumnToResearches (20121130014403)
+Migrating to AddActiveColumnToResearches (20121130014938)
+Migrating to AddClosedColumnToResearches (20121130014952)
+Migrating to CreateStudents (20121203001806)
+Migrating to CreateAdvisors (20121203044055)
+Migrating to AddFirstNameToAdvisors (20121205205424)
+Migrating to AddLastNameToAdvisors (20121205205610)
+Migrating to AddEmailToAdvisors (20121205205736)
+Migrating to AddPhoneNumberToAdvisors (20121205205908)
+Migrating to RemoveUsernameFromAdvisors (20121205210927)
+Migrating to DeviseCreateUsers (20121213215958)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121213215958')
+  [1m[36m (170.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("advisors")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("researches")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("students")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+Migrating to AddOpenColumnToResearches (20121130014403)
+Migrating to AddActiveColumnToResearches (20121130014938)
+Migrating to AddClosedColumnToResearches (20121130014952)
+Migrating to CreateStudents (20121203001806)
+Migrating to CreateAdvisors (20121203044055)
+Migrating to AddFirstNameToAdvisors (20121205205424)
+Migrating to AddLastNameToAdvisors (20121205205610)
+Migrating to AddEmailToAdvisors (20121205205736)
+Migrating to AddPhoneNumberToAdvisors (20121205205908)
+Migrating to RemoveUsernameFromAdvisors (20121205210927)
+Migrating to DeviseCreateUsers (20121213215958)
+Migrating to AddStudentIdToUsers (20121213220822)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "student_id" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121213220822')[0m
+  [1m[35m (164.2ms)[0m  commit transaction
+Migrating to AddAdvisorIdToUsers (20121213220837)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "advisor_id" integer
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121213220837')[0m
+  [1m[35m (128.6ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("advisors")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("researches")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("students")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateResearches (20121108210751)
+Migrating to AddOpenColumnToResearches (20121130014403)
+Migrating to AddActiveColumnToResearches (20121130014938)
+Migrating to AddClosedColumnToResearches (20121130014952)
+Migrating to CreateStudents (20121203001806)
+Migrating to CreateAdvisors (20121203044055)
+Migrating to AddFirstNameToAdvisors (20121205205424)
+Migrating to AddLastNameToAdvisors (20121205205610)
+Migrating to AddEmailToAdvisors (20121205205736)
+Migrating to AddPhoneNumberToAdvisors (20121205205908)
+Migrating to RemoveUsernameFromAdvisors (20121205210927)
+Migrating to DeviseCreateUsers (20121213215958)
+Migrating to AddStudentIdToUsers (20121213220822)
+Migrating to AddAdvisorIdToUsers (20121213220837)
+Migrating to AddRoleTypeToUsers (20121213220941)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "roll_type" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121213220941')[0m
+  [1m[35m (153.4ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("advisors")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("researches")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("students")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-13 15:12:10 -0700
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-13 15:12:34 -0700
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.1ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2012-12-13 15:12:37 -0700
+
+ActionController::RoutingError (No route matches [GET] "/user"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-12-13 15:12:59 -0700
+Served asset /rails.png - 304 Not Modified (46ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2012-12-13 15:13:06 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sign_in"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-13 15:13:44 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 128ms (Views: 48.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 15:13:44 -0700
+Served asset /scaffold.css - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 15:13:44 -0700
+Served asset /defaults.js - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors/1" for 127.0.0.1 at 2012-12-13 15:30:04 -0700
+Processing by AdvisorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvisor Load (0.3ms)[0m  [1mSELECT "advisors".* FROM "advisors" WHERE "advisors"."id" = ? ORDER BY last_name LIMIT 1[0m  [["id", "1"]]
+  Rendered advisors/show.html.erb within layouts/advisors (1.8ms)
+Completed 500 Internal Server Error in 72ms
+
+ActionView::Template::Error (undefined local variable or method `researches_path' for #<#<Class:0xb5936ca4>:0xb59356b0>):
+    13: 	</div>
+    14: 	<div id="columns" >
+    15: 		<div id="side" >
+    16: 			<%= link_to 'Open for sign up', researches_path %><br/>
+    17: 			<%= link_to 'Active', researches_path %><br/>
+    18: 			<%= link_to 'Closed', researches_path %><br/>
+    19: 			<!--<%= link_to 'Students', students_path %><br/>-->
+  app/views/layouts/advisors.html.erb:16:in `_app_views_layouts_advisors_html_erb__356096964__624273898'
+  app/controllers/advisors_controller.rb:21:in `show'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 15:52:14 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.6ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/advisors (4.6ms)
+Completed 500 Internal Server Error in 53ms
+
+ActionView::Template::Error (undefined local variable or method `researches_path' for #<#<Class:0xb5936ca4>:0xb6a15b38>):
+    13: 	</div>
+    14: 	<div id="columns" >
+    15: 		<div id="side" >
+    16: 			<%= link_to 'Open for sign up', researches_path %><br/>
+    17: 			<%= link_to 'Active', researches_path %><br/>
+    18: 			<%= link_to 'Closed', researches_path %><br/>
+    19: 			<!--<%= link_to 'Students', students_path %><br/>-->
+  app/views/layouts/advisors.html.erb:16:in `_app_views_layouts_advisors_html_erb__356096964__624273898'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 15:52:51 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.2ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navagation.html.erb (1.4ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___988199828__617250398'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___615694463__617646628'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 15:52:52 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.3ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navagation.html.erb (0.9ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___988199828__617250398'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___615694463__617646628'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 15:52:53 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.3ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navagation.html.erb (0.9ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___988199828__617250398'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___615694463__617646628'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors/" for 127.0.0.1 at 2012-12-13 15:52:59 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.2ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navagation.html.erb (2.3ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___988199828__617250398'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___615694463__617646628'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-13 15:56:46 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navagation.html.erb (0.9ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___988199828__617250398'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___615694463__617646628'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-13 15:57:06 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_navagation.html.erb (5.0ms)
+Completed 500 Internal Server Error in 150ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__123721029_73904680'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-12-13 16:16:46 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 16:16:46 -0700
+Served asset /scaffold.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 16:16:46 -0700
+Served asset /defaults.js - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/Profile.css?body=1" for 127.0.0.1 at 2012-12-13 16:16:46 -0700
+Served asset /Profile.css - 304 Not Modified (1ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:16:54 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.1ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 31ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 16:16:54 -0700
+Served asset /scaffold.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/Profile.css?body=1" for 127.0.0.1 at 2012-12-13 16:16:54 -0700
+Served asset /Profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 16:16:54 -0700
+Served asset /defaults.js - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:17:14 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.3ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navagation.html.erb (0.8ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__123721029__619599788'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:18:34 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.1ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navagation.html.erb (0.8ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__123721029__619599788'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:18:34 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.2ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navagation.html.erb (0.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__123721029__619599788'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:18:35 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.2ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navagation.html.erb (0.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__123721029__619599788'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:18:35 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.2ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navagation.html.erb (0.8ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__123721029__619599788'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:18:35 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[36mAdvisor Load (0.2ms)[0m  [1mSELECT "advisors".* FROM "advisors" ORDER BY last_name[0m
+  Rendered advisors/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navagation.html.erb (0.9ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionController::RoutingError (No route matches {:controller=>"researches"}):
+  app/views/layouts/_navagation.html.erb:4:in `_app_views_layouts__navagation_html_erb___1013598988__620282708'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__123721029__619599788'
+  app/controllers/advisors_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors" for 127.0.0.1 at 2012-12-13 16:19:19 -0700
+Processing by AdvisorsController#index as HTML
+  [1m[35mAdvisor Load (0.2ms)[0m  SELECT "advisors".* FROM "advisors" ORDER BY last_name
+  Rendered advisors/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffold.css" for 127.0.0.1 at 2012-12-13 16:19:19 -0700
+Served asset /scaffold.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/scaffold.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/Profile.css?body=1" for 127.0.0.1 at 2012-12-13 16:19:19 -0700
+Served asset /Profile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-12-13 16:19:19 -0700
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/advisors/1" for 127.0.0.1 at 2012-12-13 16:19:40 -0700
+Processing by AdvisorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdvisor Load (0.4ms)[0m  [1mSELECT "advisors".* FROM "advisors" WHERE "advisors"."id" = ? ORDER BY last_name LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `researches' for #<Advisor:0xb627c41c>):
+  app/controllers/advisors_controller.rb:20:in `show'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+Connecting to database specified by database.yml

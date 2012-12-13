@@ -10,16 +10,12 @@
 <body id="profile" >
 	<div id="banner" >
 		<%= @page_title || "UNM Student Profile" %>
-	</div>
-	<div id="columns" >
-		<div id="side" >
-			<a href="http://www...." >Search</a><br />
-			<a href="http://www..../faq" >My Profile</a><br />
-			<a href="http://www..../news" >My Projects</a><br />
-		</div>
+  </div>
+  <div id="container" class="container">
+
 		<div id="main" >
 			<%= yield %>
-		</div>
+    </div>
 	</div>
 </body>
 </html>
