@@ -1,10 +1,17 @@
-<div id="advisor_nav_bar">
+<div id='<%= request.url %>_nav_bar'>
   <nav>
     <ul>
-      <%= link_to 'Open Projects', advisor_researches_path %><br />
-      <%= link_to 'Active Projects', advisor_researches_path %><br />
-      <%= link_to 'Closed Projects', advisor_researches_path %><br />
-      <%= link_to 'Create New Project', new_advisor_research_path %><br />
+      <% if controller.controller_name == 'advisors' %>
+        <%= link_to 'Open Projects', advisor_researches_path(@advisor.id, :open=>"1") %><br />
+        <%= link_to 'Active Projects', advisor_researches_path(@advisor.id, :active=>"1") %><br />
+        <%= link_to 'Closed Projects', advisor_researches_path(@advisor.id, :closed=>"1") %><br />
+        <%= link_to 'Create New Projects', new_advisor_research_path(@advisor.id) %><br />
+      <% end %>
+      <% if controller.controller_name == 'students' %>
+        <li><a href="#">Search</a></li>
+        <%= link_to 'My Project', student_research_path(@student.research_id) %><br />
+        <%= link_to 'My Profile', student_path(@student.id) %><br />
+      <% end %>
     </ul>
   </nav>
 </div>

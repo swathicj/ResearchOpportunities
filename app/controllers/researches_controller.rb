@@ -42,6 +42,9 @@ class ResearchesController < ApplicationController
   # POST /researches
   # POST /researches.json
   def create
+    f = open('/tmp/research_create_params.txt', 'w')
+    f.write(params)
+    f.close()
     @advisor = Advisor.find(params[:advisor_id])
     @research = @advisor.researches.create!(params[:research])
 

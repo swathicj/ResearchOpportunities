@@ -18,7 +18,9 @@ class AdvisorsController < ApplicationController
 
 		@advisor = Advisor.find(params[:id])
     @researches = @advisor.researches
-
+    f = open("/tmp/params.txt", "w")
+    f.write(params)
+    f.close()
 		respond_to do |format|
 			format.html # show.html.erb
 			format.json { render json: @advisor }
