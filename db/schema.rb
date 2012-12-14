@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213220941) do
+ActiveRecord::Schema.define(:version => 20121214002015) do
 
   create_table "advisors", :force => true do |t|
     t.datetime "created_at",   :null => false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20121213220941) do
     t.boolean  "open"
     t.boolean  "active"
     t.boolean  "closed"
+    t.integer  "advisor_id"
   end
 
   create_table "students", :force => true do |t|
@@ -52,8 +53,9 @@ ActiveRecord::Schema.define(:version => 20121213220941) do
     t.string   "major"
     t.decimal  "GPA"
     t.text     "interests"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "research_id"
   end
 
   create_table "users", :force => true do |t|
